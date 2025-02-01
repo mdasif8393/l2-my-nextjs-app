@@ -1,8 +1,17 @@
+"use client"
+
+import { useRouter } from "next/navigation";
+
 
 const HomePage = () => {
+  const router = useRouter();
+  const handleNavigate = () => {
+
+    router.push("/dashboard")
+  }
   return (
     <div>
-      <h1 className="text-3xl">Hello World</h1>
+      <button onClick={handleNavigate}>Go to Dashboard</button>
     </div>
   );
 };
