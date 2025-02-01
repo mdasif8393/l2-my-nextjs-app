@@ -1,4 +1,8 @@
 import styles from './About.module.css';
+export const metadata = {
+    title: "About Page",
+    description: "This is About page created by NextJs "
+}
 
 const About = () => {
     return (
