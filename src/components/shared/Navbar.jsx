@@ -1,8 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -48,7 +51,11 @@ const Navbar = () => {
             <li>
               <Link
                 href="/"
-                className="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                className={
+                  pathname === "/"
+                    ? "text-blue-500 underline"
+                    : "text-white cursor-pointer hover:underline"
+                }
                 aria-current="page"
               >
                 Home
@@ -56,10 +63,39 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                href="/products"
+                className={
+                  pathname === "/products"
+                    ? "text-blue-500 underline"
+                    : "text-white cursor-pointer hover:underline"
+                }
+                aria-current="page"
+              >
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/about"
-                className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className={
+                  pathname === "/about"
+                    ? "text-blue-500 underline"
+                    : "text-white cursor-pointer hover:underline"
+                }
               >
                 About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/gallery"
+                className={
+                  pathname === "/gallery"
+                    ? "text-blue-500 underline"
+                    : "text-white cursor-pointer hover:underline"
+                }
+              >
+                Gallery
               </Link>
             </li>
             <li>
