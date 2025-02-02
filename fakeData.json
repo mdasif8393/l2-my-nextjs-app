@@ -5,7 +5,7 @@
       "productName": "Ultrabook X15",
       "category": "Laptop",
       "brand": "TechPro",
-      "price": 1500,
+      "price": 1000,
       "image": "https://www.pcworld.com/wp-content/uploads/2024/12/bf-laptop1.jpg"
     },
     {
@@ -13,7 +13,7 @@
       "productName": "Gaming Beast G9",
       "category": "Laptop",
       "brand": "GamerTech",
-      "price": 1800,
+      "price": 1500,
       "image": "https://www.pcworld.com/wp-content/uploads/2024/12/bf-laptop2.jpg"
     },
     {
